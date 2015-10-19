@@ -1,0 +1,13 @@
+[{
+  key: 'agriculture',
+  name: 'Agriculture',
+  cost: 5
+}, {
+  key: 'animal-husbandry',
+  name: 'Animal husbandry',
+  cost: 5
+}, {
+  key: 'archery'
+  name: 'Archery',
+  cost: 5
+}]
