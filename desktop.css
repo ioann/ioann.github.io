@@ -1,0 +1,360 @@
+/*@font-face {
+  font-family: "Effra W01 Regular";
+  src: url("http://195.206.224.197/Test/Desktop/Content/fonts/22d5253a-df89-458b-b414-0191063f0b7f.eot?#iefix");
+  src: url("http://195.206.224.197/Test/Desktop/Content/fonts/7edd076c-820b-4d62-8cda-94cbed70c375.svg#7edd076c-820b-4d62-8cda-94cbed70c375") format("svg"), url("http://195.206.224.197/Test/Desktop/Content/fonts/22d5253a-df89-458b-b414-0191063f0b7f.eot?#iefix") format("eot"), url("http://195.206.224.197/Test/Desktop/Content/fonts/36d7c7c7-37f6-4684-9be8-7a1dd418e06c.woff2") format("woff2"), url("http://195.206.224.197/Test/Desktop/Content/fonts/07f98c09-a3b5-4ab3-a35e-9d9474d19279.woff") format("woff"), url("http://195.206.224.197/Test/Desktop/Content/fonts/c95fc487-48ab-48c1-b4da-f9478f900fdb.ttf") format("truetype");
+}*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+body
+{  
+  font: 16px "Effra W01 Regular", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 20px;
+  color: #737373;
+  margin: 15px 0px;
+}
+form
+{
+    background-image: url(http://ioann.github.io/pci-icons-bigger.png);
+    background-repeat: no-repeat;
+    background-position: 520px 0px;
+    width: 700px;
+}
+#MISSING {
+    margin-left: 62px;
+}
+TD
+{
+  font-family: "Effra W01 Regular", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin:0px;
+  padding:0px;
+}
+DIV,SPAN 
+{   
+  font-family:"Effra W01 Regular", Helvetica, Arial, sans-serif;
+  font-size:16px;
+} 
+A:link,A:active,A:visited,A:hover
+{
+/*    text-decoration:none; */
+} 
+FORM 
+{  
+  margin:0px;
+  padding:0px;
+}
+FIELDSET
+{
+  border: none;
+  padding: 0;
+  margin: 0;
+} 
+IMG
+{ 
+  border:0px
+} 
+.ORB_BUTTON
+{
+  cursor:pointer;
+  font-weight:bolder;
+  padding:0px 10px 0px 10px;
+  width:151px
+} 
+.ORB_BUTTONELEMENT
+{
+  margin-left:125px;
+  margin-top:10px
+} 
+
+.ORB_BUTTONHELPTEXT
+{
+  display:none; 
+  white-space: nowrap;
+}
+
+/* Style definitions Get Missing Data */
+.ORB_FIELDDESCRIPTION 
+{
+  border:0px;
+  margin-left:0px;
+  padding:3px 25px 0px 0px;
+  vertical-align:top;
+  width:100px   
+}
+.ORB_INSTRUCTIONS
+{
+  padding-bottom: 40px; 
+  color: #000; 
+  font-size: 30px;
+
+}
+.ORB_INSTRUCTIONTEXT
+{
+  color: #737373; 
+}
+.ORB_TD_ERRORLEFT {
+  width: 2%;
+}
+.ORB_TD_ERRORRIGHT {
+  width: 98%;
+}
+.ORB_TD_ERRORLEFT,
+.ORB_TD_ERRORRIGHT
+{
+  font-size: 12px;
+  color: #e40037;
+  background-color: #f6e0e6;
+  text-align: left;
+  padding: 0 20px;
+} 
+.ORB_INPUT
+{
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  line-height: 24px;
+  vertical-align: middle;
+  color: #777566;
+  font: 16px/38px "Effra W01 Regular", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  -webkit-writing-mode: horizontal-tb;
+  -webkit-font-smoothing: antialiased;
+  background: url('data:image/png;base64,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') no-repeat #fff;
+} 
+.ORB_INPUT_CENTS
+{
+   background-color:#FFFF6F;
+   border:1px solid #000000;
+} 
+.ORB_TABLE_FIELDS {
+  width: 100%;
+  font-family: "Effra W01 Regular", Helvetica, Arial, sans-serif;
+  margin-left: 0px;
+  color: #737373;
+}
+.ORB_TABLE_ERRORMESSAGE {
+  margin: 15px 0;
+}
+.ORB_TABLE_ERRORMESSAGE,
+.ORB_TABLE_FIELDS
+{
+  border:0px;border-collapse:collapse;
+  margin:0px;
+  padding:0px;
+} 
+.ORB_TR_ERRORROW,
+.ORB_TR_FIELD
+{   
+  align:left;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  vertical-align:top
+}
+
+.ORB_MANDATORYMARKER {}
+.ORB_TD_FIELDELEMENT
+{
+  border:0px;
+  margin:0px;
+  padding-top:3px;
+  text-align: left;
+  vertical-align:top
+} 
+
+.ORB_TR_FIELD span, .ORB_TD_FIELDELEMENT span {
+  display: inline-block;
+  width: 140px;
+}
+.ORB_TD_FIELDELEMENT span[id*="MANDATORY_"] {
+  display: none;
+}
+
+.ORB_TR_FIELD br, .ORB_TD_FIELDELEMENT br {
+  display: none;
+}
+.ORB_SELECT
+{
+  line-height: 38px;
+  height: 40px;
+  padding: 0 0 0 12px;
+  background: #fff;
+  color: #777566;
+  border: 1px solid #e0e0e0;
+  background-color: #FFF;
+  font-size: 16px;
+  width: 93px;
+  background: url('data:image/png;base64,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') no-repeat #fff;
+
+} 
+select[name=PRODUCT_SELECT],input[name*="_CREDITCARDNUMBER"] {
+  width: 360px;
+}
+select[name*="_EXPIRYDATE_YY"]{
+  margin-left:; 15px;
+}
+/* others?
+  tableMessage
+  messagetableOK
+  messagetableNOK
+  messagerowOK
+  messagerowNOK
+  messageOK
+  messageNOK
+        clsPaymentInstructions (BODY)
+  tablePaymentInstructions
+*/
+
+/* Style definitions Continue To Provider */
+.ORB_REDIRECT {}
+/* Style definitions Payment Instructions */
+.ORB_TR_PAYMENTINSTRUCTIONS {}
+.ORB_TD_PAYMENTINSTRUCTIONS {}
+.ORB_INSTRUCTIONTITLE 
+{
+    font-weight:bolder;
+}
+.ORB_TD_INSTRUCTIONIMAGE {}
+.ORB_INSTRUCTIONTITLE,
+.ORB_INSTRUCTIONSUBTITLE 
+{
+  font-weight:bolder;
+}
+.ORB_PAYMENTINSTRUCTION {}
+.ORB_PAYMENTINSTRUCTIONCAPTION {}
+.ORB_PAYMENTINSTRUCTIONFIELD {}
+/* Style definitions DCC */
+.ORB_DCC_INSTRUCTION 
+{     
+  font-weight:bolder; 
+  padding-top: 10px;
+}
+.ORB_DCC_MERCHANT 
+{
+  font-weight:bold;
+  padding-top: 10px;
+}
+.ORB_DCC_MERCHANT_AMOUNT
+{ 
+  font-weight:bolder; 
+  padding-top: 10px;
+}
+.ORB_DCC_TR_DISCLAIMER {
+  padding-top: 10px;
+}
+.ORB_DCC_ACCEPT 
+{
+  padding-top: 10px;
+}
+.ORB_DCC_ISSUER 
+{
+  font-weight:bold;
+  padding-top: 10px;
+}
+.ORB_DCC_ISSUER_AMOUNT 
+{
+  font-weight:bolder; 
+  padding-top: 10px;
+} 
+.ORB_DCC_RATE {}
+.ORB_DCC_RATE_CAPTION {}
+
+.hidden
+{
+  display: none; 
+}
+
+.Table7R3left
+{
+  vertical-align: top;
+  border: solid windowtext 1.5pt;
+  border-left: none;
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  border-color: #999999;
+}
+
+.Table7R3top
+{
+  vertical-align: top;
+  border: solid windowtext 1.5pt;
+  border-top: none;
+  padding: 0cm 5.4pt 0cm 5.4pt;
+  border-color: #999999;
+}
+
+.Table7R7left
+{
+  vertical-align: top;
+  border: none;
+  border-left: solid windowtext .5pt;
+  border-right:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;
+  border-color: #999999;
+}
+
+.Table7R7right
+{
+  vertical-align: top;
+  border:none;
+  border-right: solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt;
+  border-color: #999999;
+}
+
+a.Normal {
+  padding-left: 15px;
+  color: #46c1be;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a.Normal:hover {
+  text-decoration: underline;
+}
+
+input[name=CREDITCARDNUMBER] {
+  width: 350px;
+}
+
+#btnCancel {
+  display: none;
+}
+
+#btnSubmit {
+  text-align: left;
+  color: #fff;
+  font: 16px/40px "Effra W01 Regular", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+  border: none;
+  padding: 0 15px 0 15px;
+  outline: none;
+  min-width: 80px;
+  text-transform: uppercase;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: #46c1be;
+  width:190px;  
+  position: absolute; 
+  bottom: 0px; 
+  right: 103px;
+  text-align: center;
+  width: 260px;
+}
+
