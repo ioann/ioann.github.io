@@ -37,10 +37,10 @@ FORM
 {  
   margin:0px;
   padding:0px;
+  /*background-image: url(https://myregus.com/content/images/pci-cards-icons-line.png);*/
   background-image: url(https://ioann.github.io/pci-icons-line.png);
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 70px;
+  background-position: center 70px;
   background-size: 260px;
 }
 #ROW_CARDSELECT td
