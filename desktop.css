@@ -24,13 +24,14 @@ body
 }
 form
 {
+    /*background-image: url(https://myregus.com/content/images/payment_page/pci-cards-icons.png);*/
     background-image: url(http://ioann.github.io/pci-icons-bigger.png);
     background-repeat: no-repeat;
     background-position: 520px 0px;
     width: 700px;
 }
 #MISSING {
-    margin-left: 62px;
+    /*margin-left: 62px;*/
 }
 TD
 {
