@@ -24,10 +24,10 @@ body
 }
 form
 {
-    background-image: url(https://myregus.com/content/images/payment_page/pci-cards-icons.png);
+    /*background-image: url(https://myregus.com/content/images/payment_page/pci-cards-icons.png);
     background-repeat: no-repeat;
-    background-position: 520px 0px;
-    width: 700px;
+    background-position: 520px 0px;*/
+    width: 585px !important;
 }
 #MISSING {
     /*margin-left: 62px;*/
@@ -353,7 +353,7 @@ input[name=CREDITCARDNUMBER] {
   width:190px;
   position: absolute;
   bottom: 0px;
-  right: 103px;
+  right: 50px;
   text-align: center;
   width: 260px;
 }
