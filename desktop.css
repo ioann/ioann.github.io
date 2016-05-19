@@ -27,10 +27,10 @@ form
     /*background-image: url(https://myregus.com/content/images/payment_page/pci-cards-icons.png);
     background-repeat: no-repeat;
     background-position: 520px 0px;*/
-    width: 585px !important;
+    width: 545px !important;
 }
 #MISSING {
-    /*margin-left: 62px;*/
+    margin-left: 50px;
 }
 TD
 {
