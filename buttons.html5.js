@@ -186,7 +186,7 @@ var _saveAs = (function(view) {
 		}
 	;
 	// IE 10+ (native saveAs)
-	/*if (typeof navigator !== "undefined" && navigator.msSaveOrOpenBlob) {
+	if (typeof navigator !== "undefined" && navigator.msSaveOrOpenBlob) {
 		return function(blob, name, no_auto_bom) {
 			name = name || blob.name || "download";
 
@@ -195,7 +195,7 @@ var _saveAs = (function(view) {
 			}
 			return navigator.msSaveOrOpenBlob(blob, name);
 		};
-	}*/
+	}
 
 	FS_proto.abort = function(){};
 	FS_proto.readyState = FS_proto.INIT = 0;
